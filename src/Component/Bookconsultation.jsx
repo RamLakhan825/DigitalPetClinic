@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PayPalButton from "./PayPal.jsx"; // Import PayPal button
 
-const Book = () => {
+const BookConsultation = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -59,4 +59,4 @@ const Book = () => {
   );
 };
 
-export default Book;
+export default BookConsultation;
