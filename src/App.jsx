@@ -7,7 +7,7 @@ import Contact from "./Component/Contact.jsx";
 import Testimonial from "./Component/testimonial.jsx";
 import { FeedbackProvider } from './context/FeedbackContext';
 import Landingpage from "./Component/Landingpage.jsx";
-import BookConsultation from "./Component/BookConsultation.jsx";
+import BookConsultation from "./Component/BookConsultation.jsx"
 import Before from "./Component/Before.jsx"
 import Terms from "./Component/Terms.jsx"
 import Privacy from "./Component/privacy.jsx"
