@@ -2,7 +2,7 @@
 
 // import React, { useState } from "react";
 // import { FaPhone, FaEnvelope, FaUser, FaBars, FaTimes } from "react-icons/fa";
-// import logo from "./photos/digitallogo.png"
+// import logo from "./photos/DigitalLogo.png"
 // import { FaPhoneAlt } from "react-icons/fa"; // Import the correct icon
 // import { Link } from "react-router-dom";
 
