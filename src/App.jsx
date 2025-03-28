@@ -11,6 +11,8 @@ import BookConsultation from "./Component/BookConsultations.jsx"
 import Before from "./Component/Before.jsx"
 import Terms from "./Component/Terms.jsx"
 import Privacy from "./Component/privacy.jsx"
+import PaymentSuccess from "./Component/success.jsx"
+
 
 function App() {
   return (
@@ -24,10 +26,12 @@ function App() {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Testimonial" element={<Testimonial />} />
             <Route path="/Landingpage" element={<Landingpage />} />
-            <Route path="/Before" element={<Before />} /> {/* Add this line */}
-            <Route path="/BookConsultation" element={<BookConsultation />} /> {/* Add this line */}
-            <Route path="/Terms" element={<Terms />} /> {/* New route */}
-            <Route path="/Privacy" element={<Privacy />} /> {/* New route */}
+            <Route path="/Before" element={<Before />} /> 
+            <Route path="/BookConsultation" element={<BookConsultation />} /> 
+            <Route path="/Terms" element={<Terms />} />
+            <Route path="/Privacy" element={<Privacy />} /> 
+            <Route path="/payment-success" element={<PaymentSuccess />} />
+
           </Routes>
 
           <Footer />

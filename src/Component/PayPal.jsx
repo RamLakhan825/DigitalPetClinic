@@ -34,9 +34,13 @@
 
 
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import { nav } from "framer-motion/client";
+import { useNavigate } from "react-router-dom";
 
 const PayPalButton = ({ amount, onSuccess }) => {
+  const navigate = useNavigate();
   return (
+   
     <PayPalScriptProvider options={{ "client-id": "ARABQW2u85Z6yP9j4whyfDMaIsXGlvZOfg2siRAtuzquCNrNvgRUX0rOVdAAp10sIAZNCRh4HryVdKz6", currency: "USD" }}>
       <PayPalButtons
         style={{ layout: "vertical" }}
@@ -55,6 +59,7 @@ const PayPalButton = ({ amount, onSuccess }) => {
         onApprove={(data, actions) => {
           return actions.order.capture().then((details) => {
             onSuccess(details);
+            navigate("/payment-success");
           });
         }}
         onError={(err) => {
