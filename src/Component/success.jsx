@@ -1,65 +1,51 @@
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React from "react";
+import { Link } from "react-router-dom";
+import dog from "./photos/dog45.jpg";
+import { motion } from "framer-motion";
 
-export default function PaymentSuccess() {
-  const navigate = useNavigate();
+const Confirmation = () => {
+    return (
+        <div className="flex items-center justify-center min-h-screen bg-[#f5f5f5] px-6">
+            <div className="bg-white shadow-lg rounded-xl p-6 md:p-10 flex flex-col md:flex-row items-center max-w-4xl w-full">
+                {/* Text Section */}
+                <div className="bg-blue-100 rounded-lg p-6 md:p-10 w-full md:w-2/3 space-y-4">
+                    <span className="text-blue-700 font-semibold text-lg tracking-wide">
+                    Digital Pet Clinic
+                    </span>
+                    <h2 className="text-4xl font-extrabold text-blue-700">
+                        Thank you for trusting us!
+                    </h2>
+                    <p className="text-gray-700 text-lg">
+                        Your payment has been successfully received. Our team will contact you soon to confirm your appointment time and provide any additional information you may need.
+                        <br /><br />
+                        We look forward to helping you and your pet!
+                    </p>
 
-  useEffect(() => {
-    toast.success("✅ Payment Successful! Your transaction was completed.", {
-      position: "top-center",
-      autoClose: 3000, // Closes after 3 seconds
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      theme: "light",
-    });
-  }, []);
+                    <a
+                        href="/"
+                        className="inline-block bg-blue-600 text-white px-6 py-2 font-[Lato] font-bold rounded-full shadow-md hover:bg-blue-700 transition duration-300 mr-4"
+                    >
+                        Go to Home
+                    </a>
+                    <a
+                        href="/Bookconsultation"
+                        className="inline-block bg-blue-600 text-white px-6 py-2 font-[Lato] font-bold rounded-full shadow-md hover:bg-blue-700 transition duration-300"
+                    >
+                        Book Another Consultation
+                    </a>
+                </div>
 
-  return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#f4f4f4",
-      }}
-    >
-      <ToastContainer />
-      <div
-        style={{
-          padding: "20px",
-          borderRadius: "10px",
-          backgroundColor: "white",
-          textAlign: "center",
-          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-        }}
-      >
-        <div style={{ fontSize: "80px", color: "green" }}>✔</div>
-        <h2 style={{ marginTop: "10px", fontSize: "24px", fontWeight: "600" }}>
-          Payment Successful
-        </h2>
-        <p style={{ color: "gray", marginTop: "5px" }}>
-          Your transaction has been completed successfully.
-        </p>
-        <button
-          style={{
-            marginTop: "20px",
-            padding: "10px 20px",
-            backgroundColor: "green",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
-          onClick={() => navigate("/")}
-        >
-          Return to Home
-        </button>
-      </div>
-    </div>
-  );
-}
+                {/* Image Section */}
+                <div className="w-full md:w-1/3 flex justify-center mt-6 md:mt-0">
+                    <img
+                        src={dog}
+                        alt="Happy Dog"
+                        className="w-64 h-64 object-cover rounded-lg shadow-md"
+                    />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Confirmation;

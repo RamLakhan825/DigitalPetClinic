@@ -11,7 +11,8 @@ import BookConsultation from "./Component/BookConsultations.jsx"
 import Before from "./Component/Before.jsx"
 import Terms from "./Component/Terms.jsx"
 import Privacy from "./Component/privacy.jsx"
-import PaymentSuccess from "./Component/success.jsx"
+import Confirmation from "./Component/success.jsx"
+import PaymentFailed from "./Component/fail.jsx"
 
 
 function App() {
@@ -30,8 +31,8 @@ function App() {
             <Route path="/BookConsultation" element={<BookConsultation />} /> 
             <Route path="/Terms" element={<Terms />} />
             <Route path="/Privacy" element={<Privacy />} /> 
-            <Route path="/payment-success" element={<PaymentSuccess />} />
-
+            <Route path="/payment-success" element={<Confirmation />} />
+            <Route path="/payment-fail" element={<PaymentFailed />} />
           </Routes>
 
           <Footer />

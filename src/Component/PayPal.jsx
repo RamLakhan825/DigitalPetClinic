@@ -64,6 +64,7 @@ const PayPalButton = ({ amount, onSuccess }) => {
         }}
         onError={(err) => {
           console.error("PayPal Payment Error:", err);
+          navigate("/payment-fail");
         }}
       />
     </PayPalScriptProvider>
